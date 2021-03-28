@@ -1,0 +1,63 @@
+/* Mobile CSS */
+@media only screen and (max-width: 480px) {
+  body {
+    background-color: aqua;
+  }
+
+  /* Section Desc */
+  .grid-container-home {
+    display: grid;
+    grid-template-columns: 100vw;
+  }
+
+  .grid-area-desc {
+    grid-area: desc;
+    height: 100vh; /* minus navbar height later */
+    background-image: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2550&q=80');
+    background-size: 
+  }
+
+
+
+  .description {
+  width: calc(100% - 20px);
+  text-align: left;
+  }
+
+  /* Section Photos */
+  .grid-area-photos {
+    grid-area: photos;
+  }
+
+  
+  img.image-home {
+    object-fit: cover;
+    height: 30vh;
+    grid-area: pic;
+  }
+  
+  h4.header {
+    grid-area: header;
+  }
+  div.grid-item-home {
+    display: grid;
+    grid-template-areas:
+      'pic'
+      'header';
+    direction: rtl;
+  }
+
+  /* Section Rooms */
+
+  /* Section Register */
+
+  /* Layout */
+  .main-home {
+    display: grid;
+    grid-template-areas:
+      'desc'
+      'photos'
+      'rooms'
+      'register';
+  }
+}

@@ -18,7 +18,6 @@ body {
   flex-direction: column;
   align-items: stretch;
 }
-
 p {
   padding: 0;
   line-height: 1.25em;
@@ -260,11 +259,24 @@ footer {
   grid-column-start: 1;
   grid-column-end: 4;
   text-align: center;
+  max-width: 600px;
 }
 
 .description p {
-  width: 50%;
+  min-width: calc(100% - 20px);
+  max-width: 500px;
+  text-align: left;
 }
+
+/* Layout */
+.main-home {
+    display: grid;
+    grid-template-areas:
+      'desc'
+      'photos'
+      'rooms'
+      'register';
+  }
 
 /* membership page */
 .memebership-page{

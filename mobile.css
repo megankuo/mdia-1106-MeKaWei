@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700|Montserrat:300,400,500,700|Nunito:300,400,600,700');
+
+
 /* Mobile CSS */
 @media only screen and (max-width: 480px) {
   body {
-    background-color: aqua;
+    background-color:wheat;
   }
 
   /* Section Desc */
@@ -14,7 +17,7 @@
     grid-area: desc;
     height: 100vh; /* minus navbar height later */
     background-image: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2550&q=80');
-    background-size: 
+    background-size: large;
   }
 
 
@@ -60,4 +63,77 @@
       'rooms'
       'register';
   }
+
+/* --------------all menu ---------------*/
+/*-----1.card flipping-----------*/
+.card-container {
+  height: 200px;
+  perspective: 600;
+  position: relative;
+  width: 150px;
+  padding: 10px;;
 }
+
+.card{
+  position:absolute;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  height: 80%;
+  width: 80%
+}
+
+/* .card:hover {
+  transform: rotateY(180deg);
+} */
+
+.card .side {
+  backface-visibility: hidden;
+  border-radius: 50px;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.card .back{
+  background: #eaeaed;
+  color: #0087cc;
+  text-align: center;
+  transform: rotateY(180deg);
+}
+
+
+.card.flipped {
+  -webkit-transform: rotateY( 180deg );
+  -moz-transform: rotateY( 180deg );
+  -o-transform: rotateY( 180deg );
+  transform: rotateY( 180deg );
+}
+
+/* 2------small dot boarder----------*/
+.menu-item {
+  border-width: 5px;
+}
+
+
+/*new bbt page*/
+.grid-item-middle{
+  display:none;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin:auto;
+  padding:10px;
+
+}
+
+
+.title-only-show-in-mobile{
+  display: block;
+  text-align: center;
+}
+
+
+
+}
+

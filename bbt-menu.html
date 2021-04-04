@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width" />
     <title>MeKaWei Bubble Tea Menu</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="mobile.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Raleway:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="menu.js" charset="utf-8"></script>
   </head>
 
   <body>
@@ -30,27 +34,91 @@
       </nav>
     </header>
     <main>
-      <section>
+      <section>  
+        
+        <!-- this header only show in mobile version -->
+          <div class = "title-only-show-in-mobile">
+          <!-- <img src="./images/bubbletea/bbt-menu.png" alt="Bubble Tea Menu" srcset="" /> -->
+          <h1>Bubble Tea Menu</h1>
+        </div>
+
         <div class="grid-container tea-container">
           <!-- Left Column -->
           <div class="grid-item">
-            <div class="card">
-              <img class="menu-item" src="./images/bubbletea/parfait.png" alt="parfait" />
-              <h6>Parfait Bubble Tea</h6>
+
+            <div class ="card-container">
+              <div class="card">
+                <div class="side">
+                  <img class="menu-item" src="./images/bubbletea/parfait.png" alt="parfait" />
+                  <h6>Parfait Bubble Tea</h6>
+              </div>
+
+                <div class="side back">
+                  <h3>Parfait Bubble Tea (Cold)</h3>
+                  <p>
+                    Regular: $10 <br />
+                    Large: $15 <br />
+                    Add Pearls: + $1
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="card">
-              <img class="menu-item" src="./images/bubbletea/Taro.png" alt="Taro" />
-              <h6>Taro Milk Tea with Pearls</h6>
+
+            <div class ="card-container">
+              <div class="card">
+                <div class="side">
+                  <img class="menu-item" src="./images/bubbletea/Taro.png" alt="Taro" />
+                  <h6>Taro Milk Tea with Pearls</h6>
+                </div>
+
+              <div class="side back">
+                  <h3>Taro Milk Tea</h3>
+                  <p>
+                    Regular: $10 <br />
+                    Large: $15 <br />
+                    Add Pearls: + $1
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="card">
-              <img class="menu-item" src="./images/bubbletea/coffee.png" alt="coffee" />
-              <h6>Coffee Milk Tea with Pearls</h6>
-            </div>
-            <div class="card">
-              <img class="menu-item" src="./images/bubbletea/mango.png" alt="mango" />
-              <h6>Mango Milk Slush with Pearls</h6>
+
+          <div class ="card-container">
+              <div class="card">
+                <div class="side">
+                  <img class="menu-item" src="./images/bubbletea/coffee.png" alt="coffee" />
+                  <h6>Coffee Milk Tea with Pearls</h6>
+              </div>
+
+              <div class="side back">
+                <h3>Coffee Milk Tea</h3>
+                <p>
+                  Regular: $10 <br />
+                  Large: $15 <br />
+                  Add Pearls: + $1
+                </p>
+              </div>
             </div>
           </div>
+
+          <div class ="card-container">
+              <div class="card">
+                <div class="side">
+                  <img class="menu-item" src="./images/bubbletea/mango.png" alt="mango" />
+                  <h6>Mango Milk Slush with Pearls</h6>
+              </div>
+              
+              <div class="side back">
+                <h3>Mango Milk Slush</h3>
+                <p>
+                  Regular: $10 <br />
+                  Large: $15 <br />
+                  Add Pearls: + $1
+                </p>
+              </div>
+            </div>
+          </div>
+
+         </div>
           <!-- Middle Column -->
           <div class="grid-item-middle">
             <img src="./images/bubbletea/bbt-menu.png" alt="Bubble Tea Menu" srcset="" />
@@ -123,22 +191,79 @@
           </div>
           <!-- Right Column -->
           <div class="grid-item">
-            <div class="card">
-              <img class="menu-item" src="./images/bubbletea/PearlMilkTea.png" alt="PearlMilkTea" />
-              <h6>Pearl Milk Tea</h6>
+            <div class ="card-container">
+              <div class="card">
+                <div class="side">
+                  <img class="menu-item" src="./images/bubbletea/PearlMilkTea.png" alt="PearlMilkTea" />
+                  <h6>Pearl Milk Tea</h6>
+              </div>
+              <div class="side back">
+                  <h3>Pearl Milk Tea</h3>
+                  <p>
+                    Regular: $10 <br />
+                    Large: $15 <br />
+                    Add Pearls: + $1
+                  </p>
+              </div>
+              </div>
             </div>
-            <div class="card">
-              <img class="menu-item" src="./images/bubbletea/brownsugar.png" alt="brownsugar" />
-              <h6>Brown Sugar Milk Tea with Pearls</h6>
+
+            <div class ="card-container">
+              <div class="card">
+                <div class="side">
+                  <img class="menu-item" src="./images/bubbletea/brownsugar.png" alt="brownsugar" />
+                  <h6>Brown Sugar Milk Tea with Pearls</h6>
+                </div>
+
+                <div class="side back">
+                  <h3>Brown Sugar Milk Tea</h3>
+                  <p>
+                    Regular: $10 <br />
+                    Large: $15 <br />
+                    Add Pearls: + $1
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="card">
-              <img class="menu-item" src="./images/bubbletea/strawberry.png" alt="strawberry" />
-              <h6>Strawberry Milk Tea With Pearls</h6>
+
+            <div class ="card-container">
+              <div class="card">
+                <div class="side">
+                  <img class="menu-item" src="./images/bubbletea/strawberry.png" alt="strawberry" />
+                  <h6>Strawberry Milk Tea With Pearls</h6>
+                </div>
+
+                <div class="side back">
+                  <h3>Strawberry Milk Tea</h3>
+                  <p>
+                    Regular: $10 <br />
+                    Large: $15 <br />
+                    Add Pearls: + $1
+                  </p>
+                </div>            
+              </div>
             </div>
-            <div class="card">
-              <img class="menu-item" src="./images/bubbletea/pudding.png" alt="pudding" />
-              <h6>Pudding Milk Tea with Pearls</h6>
-            </div>
+
+            <div class ="card-container">
+              <div class="card">
+                <div class="side">
+                  <img class="menu-item" src="./images/bubbletea/pudding.png" alt="pudding" />
+                  <h6>Pudding Milk Tea with Pearls</h6>
+                </div>
+  
+                <div class="side back">
+                  <h3>Pudding Milk Tea</h3>
+                  <p>
+                    Regular: $10 <br />
+                    Large: $15 <br />
+                    Add Pearls: + $1
+                  </p>
+                </div>
+              </div>
+           </div>
+              
+
+
           </div>
         </div>
       </section>

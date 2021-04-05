@@ -50,6 +50,7 @@ h5,
 h6 {
   font-family: 'Cinzel', serif;
   color: #2e5077;
+  text-align: center;
 }
 
 h4,
@@ -359,4 +360,5 @@ button {
 button:hover {
   background-color: #2e5077;
   color: #fcbf49;
+  transition: all 0.3s ease-out;
 }

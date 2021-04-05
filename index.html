@@ -20,17 +20,17 @@
     <nav>
       <ul>
 
-        <li><a href="index.html">Who We Are</a></li>
+        <li><a href="#about">Who We Are</a></li>
         <li><a href="bbt-menu.html">Bubble Tea Menu</a></li>
         <li><a href="dessert-menu.html">Dessert Menu</a></li>
-        <li><a href="membership.html">Membership</a></li>
+        <li><a href="#register">Membership</a></li>
         <li><img class="user-icon" src="images/user-icon.png"><a href="membership.html">Login</a></li>
 
       </ul>
     </nav>
   </header>
   <main class="main-home">
-    <section class="grid-area-photos">
+    <section class="grid-area-photos" id="features">
       <div class="grid-container-home">
 
         <div class="grid-item-home">
@@ -56,7 +56,7 @@
         </div>
       </div>
     </section>
-    <section class="grid-area-desc">
+    <section class="grid-area-desc" id="about">
 
       <h1>Make your way to <br><span class="blue">&nbsp;MeKaWei</span></h1>
       <div class="description">
@@ -76,8 +76,8 @@
 
     </section>
 
-    <section class="rooms">
-      <h2 class="card-header"><a href="membership.html">Study and Work</a></h2>
+    <section id="rooms">
+      <h2 class="card-header">Study and Work</h2>
       <!-- The dots/circles -->
       <div style="text-align:center">
         <span class="dot" onclick="currentSlide(1)"></span>
@@ -124,7 +124,7 @@
             <p>
               People can enjoy their time, catching up with their friends. <br>
               The space is designed for comfort and relaxation.
-            </>
+              </>
           </div>
         </div>
 
@@ -137,8 +137,32 @@
 
     </section>
 
-    <section class="register">
+    <section id="register">
+      <h2>Become a Member</h2>
+      <div class="container">
+        <p>We always welcome new friends to join our membership! With membership, you can book conference rooms, study
+          area, and enjoy drinks and desserts with membership discounts!</p>
+        <ul>
+          <li> Student Membership: $65/month
+          <li> Normal Membership: $100/month
+        </ul>
+      </div>
+      <form action="register.php">
+        <h3>Sign-up here </h3>
+        <div class="container">
+          <label for="email"><b>Enter Your Email </b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
 
+          <label for="psw"><b>Enter Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+
+          <label for="psw-repeat"><b>Repeat Password</b></label>
+          <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+          <button type="submit">Sign up</button>
+        </div>
+
+      </form>
     </section>
 
   </main>

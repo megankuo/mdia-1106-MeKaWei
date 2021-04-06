@@ -1,15 +1,15 @@
 /*** Global ***/
-
+/* 
 html {
   /* height: 100%; */
   box-sizing: border-box;
-}
+} */
 
 .test {
   color: red;
 }
 
-body {
+/* body {
   min-height: 100%;
   box-sizing: border-box;
 }
@@ -23,7 +23,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-}
+} */
 p {
   padding: 0;
   line-height: 1.25em;

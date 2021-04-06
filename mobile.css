@@ -13,6 +13,9 @@
   section {
     margin: 10px auto;
   }
+  header {
+    height: min-content;
+  }
 
   .container {
     text-align: left;
@@ -21,6 +24,11 @@
     flex-direction: column;
     justify-content: space-evenly;
     margin: 1em 10px;
+  }
+
+  .sticky-bar {
+    position: sticky;
+    top: 0px;
   }
 
   /* Section Desc */
@@ -48,6 +56,47 @@
     text-align: center;
     font-size: 1.5em;
     margin: 0 auto 1em;
+  }
+
+  #about h1 {
+    position: relative;
+    animation: slideInLeft;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  p {
+    position: relative;
+    animation: slideInRight;
+    animation-delay: 0.6s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .cta-trial {
+    position: relative;
+    animation: slideInLeft;
+    animation-delay: 1.2s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes slideInLeft {
+    from {
+      left: -1000px;
+    }
+    to {
+      left: 0px;
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      right: -1000px;
+    }
+    to {
+      right: 0px;
+    }
   }
 
   /* Section Photos */
@@ -177,19 +226,21 @@
   /* Section Register */
 
   /* Register form */
-  input[type=text], input[type=password] {
-  width: 90%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
+  input[type='text'],
+  input[type='password'] {
+    width: 90%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
 
-input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
+  input[type='text']:focus,
+  input[type='password']:focus {
+    background-color: #ddd;
+    outline: none;
+  }
 
   /* Layout */
   .main-home {
@@ -200,4 +251,8 @@ input[type=text]:focus, input[type=password]:focus {
       'rooms'
       'register';
   }
+}
+
+/* Desktop */
+@media screen and (min-width: 1000px) {
 }

@@ -2,10 +2,16 @@
 
 html {
   /* height: 100%; */
+  box-sizing: border-box;
+}
+
+.test {
+  color: red;
 }
 
 body {
   min-height: 100%;
+  box-sizing: border-box;
 }
 
 body {
@@ -69,6 +75,11 @@ strong {
 
 /*** Header ***/
 
+.sticky-bar {
+  position: sticky;
+  top: 0px;
+}
+
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -120,7 +131,7 @@ main {
   /* margin: 0 auto; */
   /* width: 100vw; */
   flex-grow: 2;
-  padding: 0 0 125px;
+  padding: 0;
 }
 
 section {

@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>MeKaWei Bubble Tea Cafe</title>
+  <script src="scripts/jquery.js" charset="utf-8"></script>
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link href="mobile.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -12,23 +13,25 @@
     href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Raleway:wght@400;700&display=swap"
     rel="stylesheet">
   <script src="https://kit.fontawesome.com/738c285426.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
   <header>
     <a href="index.html"> <img class="logo-top" src="images/Logo.png"></a>
-    <nav>
-      <ul>
 
-        <li><a href="#about">Who We Are</a></li>
-        <li><a href="bbt-menu.html">Bubble Tea Menu</a></li>
-        <li><a href="dessert-menu.html">Dessert Menu</a></li>
-        <li><a href="#register">Membership</a></li>
-        <li><img class="user-icon" src="images/user-icon.png"><a href="membership.html">Login</a></li>
-
-      </ul>
-    </nav>
   </header>
+  <nav class="sticky-bar">
+    <ul>
+
+      <li><a href="#about">Who We Are</a></li>
+      <li><a href="bbt-menu.html">Bubble Tea Menu</a></li>
+      <li><a href="dessert-menu.html">Dessert Menu</a></li>
+      <li><a href="#register">Membership</a></li>
+      <li><img class="user-icon" src="images/user-icon.png"><a href="membership.html">Login</a></li>
+
+    </ul>
+  </nav>
   <main class="main-home">
     <section class="grid-area-photos" id="features">
       <div class="grid-container-home">
@@ -98,7 +101,7 @@
               Each conference room can hold up to 10 people. <br>
               Each room has 2 HDTVs and a White Board. <br>
             </p>
-            <img class="btn-booking" src="./images/btn-book.png" alt="btn-booking">
+            <!-- <img class="btn-booking" src="./images/btn-book.png" alt="btn-booking"> -->
           </div>
         </div>
 
@@ -112,7 +115,7 @@
               Shared desks and booths are available.<br>
               This area can hold 15 people.<br>
             </p>
-            <img class="btn-booking" src="./images/btn-book.png" alt="btn-booking">
+            <!-- <img class="btn-booking" src="./images/btn-book.png" alt="btn-booking"> -->
           </div>
         </div>
 
@@ -191,7 +194,7 @@
 
 
   </footer>
-  <script src="scripts.js"></script>
+  <script src="/scripts/scripts.js"></script>
 </body>
 
 </html>

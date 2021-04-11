@@ -1,63 +1,557 @@
 /* Mobile CSS */
-@media only screen and (max-width: 480px) {
+html {
+  /* height: 100%; */
+  box-sizing: border-box;
+}
+
+body {
+  /* background-color: aqua; */
+  font-size: 15pt;
+  /* min-height: 100%; */
+  /* box-sizing: border-box; */
+  font-family: 'Raleway', sans-serif;
+  color: #3c4043;
+  margin: 0 8px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+h1 {
+  font-family: 'Cinzel Decorative', cursive;
+  color: #428a51;
+  text-align: center;
+  font-size: 2.7em;
+  margin: 0 10px;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Cinzel', serif;
+  color: #2e5077;
+  text-align: center;
+}
+
+h4,
+h5,
+h6 {
+  margin-top: 0.5em;
+}
+
+main {
+  background-image: url('./images/mountain background.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  /* margin: 0 auto; */
+  /* width: 100vw; */
+  flex-grow: 2;
+  padding: 0;
+}
+
+section {
+  margin: 10px auto;
+  max-width: 1200px;
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+header {
+  height: min-content;
+}
+
+p {
+  padding: 0;
+  line-height: 1.25em;
+  margin: 0.5em auto 0.5em;
+}
+
+a {
+  color: #428a51;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+a:hover {
+  background-color: #fcbf49;
+  color: #2e5077;
+}
+
+strong {
+  color: #428a51;
+}
+
+.container {
+  text-align: left;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 1em 10px;
+}
+
+/* Navigation */
+
+/* Hamburger Menu */
+/* .hamburger {
+  background-color: transparent;
+  border: 0;
+  display: block; /* Hides hamburger menu icon on desktop version 
+  color: #4c4c7c;
+  cursor: pointer;
+  font-size: 25px;
+  align-items: right;
+  margin-right: 10px;
+} */
+
+/* .hamburger:focus {
+  outline: none;
+} */
+
+.sticky-bar {
+  position: sticky;
+  top: 0px;
+  /* overflow: hidden;
+  background-color: #333;
+  position: relative; */
+}
+
+/* nav {
+  display: flex;
+  justify-content: space-between;
+} */
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #2e5077;
+  text-align: center;
+/* 
+  display: none;
+  flex-direction: column;
+  width: 100%; */
+}
+
+nav ul.show {
+  display: flex;
+}
+
+nav li {
+  display: inline;
+  padding: 8px;
+}
+
+nav li a {
+  display: inline-block;
+  color: #fcbf49;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+nav li a:hover {
+  background-color: #fcbf49;
+  color: #2e5077;
+}
+
+/* .user-icon {
+  height: 28px;
+  position: relative;
+  top: 10px;
+} */
+
+.logo-top {
+  display: block;
+  width: 150px;
+  margin: 0 auto;
+}
+
+/* About us */
+.grid-container-home {
+  display: grid;
+  grid-template-columns: 100vw;
+}
+
+.grid-area-desc {
+  grid-area: desc;
+  min-height: 100vh; /*minus navbar height later */
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+    url('./images/office-bg.jpeg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blue {
+  color: #2e5077;
+}
+.cta-trial {
+  text-align: center;
+  font-size: 1.5em;
+  margin: 0 auto 1em;
+}
+
+#about h1 {
+  position: relative;
+  animation: slideInLeft;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+#about p {
+  position: relative;
+  animation: slideInRight;
+  animation-delay: 0.6s;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+.slideInLeft {
+  position: relative;
+  animation: slideInLeft;
+  animation-delay: 1.2s;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    left: -1000px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    right: -1000px;
+  }
+  to {
+    right: 0px;
+  }
+}
+
+/* Section Photos */
+.grid-area-photos {
+  grid-area: photos;
+  height: 100vh;
+}
+
+.image-home,
+.card-header {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+.image-home {
+  object-fit: cover;
+  height: 50vh;
+  width: 100vw;
+  /* grid-area: pic; */
+}
+
+.card-header {
+  /* grid-area: header; */
+  position: relative;
+  align-self: start;
+  background: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  padding: 0.2em;
+  width: 100%;
+}
+
+.grid-item-home {
+  display: grid;
+  justify-items: center;
+}
+
+.room {
+  display: none;
+}
+
+/* Section Rooms */
+
+.conference {
+  background-color: #9dced2;
+}
+
+.indep {
+  background-color: #9fd1a9;
+}
+
+.casual {
+  background-color: #e1b7b7;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.carousel {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 7em;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(252, 191, 73, 0.8);
+}
+
+/* Caption text */
+.room-desc {
+  color: #f2f2f2;
+  padding: 0.2em 12px 0.8em;
+  /* position: absolute;
+  bottom: 8px; */
+  /* width: 100%; */
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px 0.3em;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #f2994a;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Section Register */
+
+/* Register form */
+input[type='text'],
+input[type='password'] {
+  width: 90%;
+  padding: 15px;
+  margin: 5px auto 22px;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type='text']:focus,
+input[type='password']:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+button {
+  margin: 0 auto;
+  background-color: #fcbf49;
+  border-radius: 12px;
+  border: 0;
+  display: inline-block;
+  font: bold 1.5em 'Cinzel', serif;
+  color: #2e5077;
+  padding: 5px 10px;
+  width: calc(90% + 30px);
+}
+
+button:hover {
+  background-color: #2e5077;
+  color: #fcbf49;
+  transition: all 0.3s ease-out;
+}
+
+/* Layout */
+.main-home {
+  display: grid;
+  justify-items: center;
+  grid-template-areas:
+    'desc'
+    'photos'
+    'rooms'
+    'register';
+}
+
+/*** Footer ***/
+
+footer {
+  background-color: #9dced2;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+}
+
+#contact {
+  margin: 0;
+  padding: 0;
+}
+
+#contact p {
+  font-size: 0.7rem;
+  line-height: normal;
+}
+
+#social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#disclaimer {
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  top: 15px;
+  height: 20px;
+}
+
+#disclaimer p {
+  padding-top: 0;
+  font-size: 0.7rem;
+  line-height: normal;
+}
+
+/* Desktop */
+@media screen and (min-width: 800px) {
   body {
-    background-color: aqua;
+    font-size: 12pt;
   }
 
-  /* Section Desc */
+  h1 {
+    font-size: 48px;
+    margin: 0.3em auto;
+  }
+
+  #features,
+  #rooms,
+  #register {
+    height: min-content;
+    min-height: 0px;
+    margin: 5em 0;
+  }
+  /* Section Photos */
+
   .grid-container-home {
     display: grid;
-    grid-template-columns: 100vw;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
   }
 
-  .grid-area-desc {
-    grid-area: desc;
-    height: 100vh; /* minus navbar height later */
-    background-image: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2550&q=80');
-    background-size: 
+  .grid-item-home {
+    padding: 0 20px;
+    text-align: center;
   }
 
+  .image-home {
+    height: 50vh;
+    width: 100%;
+    /* grid-area: pic; */
+  }
 
-
+  /* Section Dscription */
   .description {
-  width: calc(100% - 20px);
-  text-align: left;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+    max-width: 800px;
+    justify-self: center;
+    padding: 0 10px;
   }
 
-  /* Section Photos */
-  .grid-area-photos {
-    grid-area: photos;
+  .description p {
+    max-width: 800px;
+    text-align: center;
   }
 
-  
-  img.image-home {
-    object-fit: cover;
-    height: 30vh;
-    grid-area: pic;
+  /* Rooms */
+  .prev,
+  .next {
+    top: 40%;
   }
-  
-  h4.header {
-    grid-area: header;
-  }
-  div.grid-item-home {
+
+  /* Register */
+  #register {
     display: grid;
-    grid-template-areas:
-      'pic'
-      'header';
-    direction: rtl;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Section Rooms */
+  #register h2 {
+    grid-column: 1 / 4;
+  }
 
-  /* Section Register */
+  #register .container {
+    grid-column: 1 /2;
+  }
 
-  /* Layout */
-  .main-home {
-    display: grid;
-    grid-template-areas:
-      'desc'
-      'photos'
-      'rooms'
-      'register';
+  .registerForm {
+    grid-column: 2 /3;
   }
 }

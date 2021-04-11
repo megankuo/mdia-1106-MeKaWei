@@ -1,79 +1,110 @@
 <?php
 require 'config.php';
 
-// Should return a PDO
 function db_connect() {
 
+  // try to open database connection
   try {
-    // TODO
-    // try to open database connection using constants set in config.php
-    // return $pdo;
-    $connString = 'mysql:host=' . DBHOST . ';dbname=' . DBNAME;
+
+    $connectionString = 'mysql:host=' . DBHOST . ';dbname=' . DBNAME;
     $user = DBUSER;
     $pass = DBPASS;
 
-    $pdo = new PDO($connString, $user, $pass);
+    // MAKE CONNECTION AND SET UP ERROR STUFF
+    $pdo = new PDO($connectionString, $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     return $pdo;
+
   }
   catch (PDOException $e)
   {
     die($e->getMessage());
+
   }
 }
 
-// Handle form submission
-function handle_form_submission() {
+function submit_post() {
+
   global $pdo;
 
   if($_SERVER["REQUEST_METHOD"] == "POST")
   {
-    // TODO
-    if(isset($_POST['email']) && isset($_POST['mood']) && isset($_POST['comment'])) {
-      
-      $sql = "INSERT INTO comments (email, mood, date, commentText) VALUES (:email, :mood, :date, :commentText)";
+
+    // GO THROUGH AND BIND EACH VALUE
+
+    if (isset( $_POST['email']) && isset($_POST['mood']) && isset($_POST['comment']))
+    {
+
+      //PREPARED statement
+      $sql = 'INSERT INTO comments (email, mood, date, commentText) VALUES (:email, :mood, :date, :commentText)';
 
       $statement = $pdo->prepare($sql);
 
-      $statement->bindValue(":email", $_POST["email"]);
-      $statement->bindValue(":mood", $_POST["mood"]);
-      $statement->bindValue(":commentText", $_POST["comment"]);
-      $statement->bindValue(":date", date('Y-m-d'));
+      $statement->bindValue(':email', $_POST['email']);
+      $statement->bindValue(':mood', $_POST['mood']);
+      $statement->bindValue(':date', date('Y-m-d'));
+      $statement->bindValue(':commentText', $_POST['comment']);
       $statement->execute();
-
     }
-  }
-}
 
-// Get all comments from database and store in $comments
-function get_comments() {
+  }
+
+}// end submit post
+
+function get_posts() {
+
   global $pdo;
-  global $comments;
+  global $posts;
+  global $filter;
+  // ACTUALLY GET THE COMMENTS
 
-  //TODO
-  if (isset($_GET['filter'])) {
-    $sql = "SELECT * FROM comments WHERE email='" . $_GET['filter'] . "' ORDER BY ID DESC";
-  } else {
-    $sql = "SELECT * FROM comments ORDER BY ID DESC"; // getting comments out of db
-  }
+  // CREATE THE QUERY STRING
+  $sql = "SELECT * FROM comments " . $filter . " ORDER BY ID DESC";
+//  $sql = "SELECT * FROM comments ORDER BY ID";
 
   $result = $pdo->query($sql);
-  while($row = $result->fetch()) {
-    $comments[] = $row; // add new comment object to array
-  }
-}
 
-// Get unique email addresses and store in $commenters
+  while($row = $result->fetch())
+  {
+    //displayPost($row);
+    $posts[] = $row;
+  }
+
+}// End get posts
+
 function get_commenters() {
   global $pdo;
   global $commenters;
 
-  //TODO
-  $sql = "SELECT DISTINCT email FROM comments"; // getting comments out of db
+  // GET UNIQUE commenters
+  // CREATE THE QUERY STRING
+  $sql = "SELECT DISTINCT email FROM comments";
 
   $result = $pdo->query($sql);
-  while($row = $result->fetch()) {
-    $commenters[] = $row; // add unique email object to array
+
+  // LOOP FOR DISPLAYING COMMENTERS
+  //echo "<div class='commenters'><h2>People Who have Commented:</h2><ul>";
+
+  while($row = $result->fetch())
+  {
+    //displayCommenter($row);
+    $commenters[] = $row;
+  }
+
+
+}
+
+function apply_filter() {
+
+  global $filter;
+
+  if($_SERVER["REQUEST_METHOD"] == "GET")
+  {
+    if(isset($_GET['filter']))
+    {
+        $filter = "WHERE email='" . $_GET['filter'] . "' ";
+    }
+
   }
 }

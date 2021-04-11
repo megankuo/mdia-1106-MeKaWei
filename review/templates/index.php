@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>MeKaWei Dessert Menu</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link href="mobile.css" rel="stylesheet" type="text/css" />
+    <link href="../style.css" rel="stylesheet" type="text/css" />
+    <link href="../mobile.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Raleway:wght@400;700&display=swap"
@@ -22,10 +22,11 @@
       <a href="index.html"> <img class="logo-top" src="images/Logo.png" /></a>
       <nav>
         <ul>
-          <li><a href="index.html">Who We Are</a></li>
-          <li><a href="bbt-menu.html">Bubble Tea Menu</a></li>
-          <li><a href="dessert-menu.html">Dessert Menu</a></li>
-          <li><a href="membership.html">Membership</a></li>
+          <li><a href="../index.html">Who We Are</a></li>
+          <li><a href="../bbt-menu.html">Bubble Tea Menu</a></li>
+          <li><a href="../dessert-menu.html">Dessert Menu</a></li>
+          <li><a href="../membership.html">Membership</a></li>
+          
           <li>
             <img class="user-icon" src="images/user-icon.png" /><a href="membership.html">
               Login</a
@@ -42,11 +43,13 @@
             <div class="write-comment">
       <h2>Post a Comment</h2>
 
-      <form action="index.php" method="post">
+     
+      <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+  
 
         <label>
           Email Address:
-          <input type="email" name="email">
+          <input type="email" name="email" required>
         </label>
 
         <label>
@@ -62,7 +65,7 @@
 
         <label>
           Enter a Comment:
-          <textarea name="comment"></textarea>
+          <textarea name="comment" required minlength="8"></textarea>
         </label>
 
         <button type="submit" name="button">Post Comment</button>
@@ -74,13 +77,7 @@
       the_commenters();
      ?>
   </body>
-</html>
 
-           
-         
-          
-
-          
 
           </div>
         </div>
@@ -115,29 +112,6 @@
 
     <script id="source" language="javascript" type="text/javascript">
 
-  $(function () 
-  {
-    //-----------------------------------------------------------------------
-    // 2) Send a http request with AJAX http://api.jquery.com/jQuery.ajax/
-    //-----------------------------------------------------------------------
-    $.ajax({                                      
-      url: 'api.php',                  //the script to call to get data          
-      data: "",                        //you can insert url argumnets here to pass to api.php
-                                       //for example "id=5&parent=6"
-      dataType: 'json',                //data format      
-      success: function(data)          //on recieve of reply
-      {
-        var id = data[0];              //get id
-        var vname = data[1];           //get name
-        //--------------------------------------------------------------------
-        // 3) Update html content
-        //--------------------------------------------------------------------
-        $('#output').html("<b>id: </b>"+id+"<b> name: </b>"+vname); //Set output element html
-        //recommend reading up on jquery selectors they are awesome 
-        // http://api.jquery.com/category/selectors/
-      } 
-    });
-  }); 
 
   </script>
   </body>

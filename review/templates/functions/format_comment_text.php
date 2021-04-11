@@ -1,4 +1,6 @@
 <?php
+
+
 // THIS FUNCTION FORMATS COMMENT TEXT BY INSERTING PARAGRAPH BREAKS
 function formatCommentText($comment)
 {

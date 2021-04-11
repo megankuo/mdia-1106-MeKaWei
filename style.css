@@ -1,23 +1,29 @@
 /*** Global ***/
-
+/* 
 html {
   height: 100%;
+  box-sizing: border-box;
+} */
+
+.test {
+  color: red;
 }
 
-body {
+/* body {
   min-height: 100%;
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Raleway', sans-serif;
-  font-size: 11;
+  font-size: 12pt;
   color: #3c4043;
-  margin: 0;
+  margin: 0 8px;
   padding: 0;
   display: flex;
   flex-direction: column;
   align-items: stretch;
-}
+} */
 p {
   padding: 0;
   line-height: 1.25em;
@@ -28,6 +34,7 @@ a {
   color: #428a51;
   font-weight: bold;
   text-decoration: none;
+  transition: all 0.3s;
 }
 
 a:hover {
@@ -49,6 +56,7 @@ h5,
 h6 {
   font-family: 'Cinzel', serif;
   color: #2e5077;
+  text-align: center;
 }
 
 h4,
@@ -65,8 +73,12 @@ strong {
   color: #428a51;
 }
 
-
 /*** Header ***/
+
+.sticky-bar {
+  position: sticky;
+  top: 0px;
+}
 
 nav ul {
   list-style-type: none;
@@ -90,6 +102,7 @@ nav li a {
   text-decoration: none;
   font-family: 'Cinzel', serif;
   font-weight: 600;
+  transition: all 0.3s;
 }
 
 nav li a:hover {
@@ -115,17 +128,20 @@ main {
   background-image: url('./images/mountain background.png');
   background-repeat: no-repeat;
   background-position: center bottom;
-  margin: 0 auto;
-  width: 100%;
+  /* margin: 0 auto; */
+  /* width: 100vw; */
   flex-grow: 2;
-  padding: 50px 0 125px;
+  padding: 0;
 }
 
 section {
   margin: 0 auto;
   max-width: 1200px;
+  width: 100vw;
+  min-height: 100vh;
   display: grid;
   justify-content: center;
+  align-content: center;
   align-items: center;
 }
 
@@ -255,23 +271,22 @@ footer {
 
 /* home page */
 
+.fa-arrow-circle-right {
+  display: none;
+}
+
 .grid-container-home {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
 .grid-item-home {
-  padding: 0 20px;
-  text-align: center;
+  /* padding: 0 20px; */
+  /* text-align: center; */
 }
 
 .image-home {
   width: 100%;
-}
-
-.more-space {
-  letter-spacing: 0.2em;
-  color: #2e5077;
 }
 
 .description {
@@ -279,39 +294,39 @@ footer {
   grid-column-end: 4;
   text-align: center;
   max-width: 600px;
+  justify-self: center;
+  padding: 0 10px;
 }
 
 .description p {
-  min-width: calc(100% - 20px);
-  max-width: 500px;
+  max-width: 800px;
   text-align: left;
 }
 
 /* Layout */
 .main-home {
-    display: grid;
-    grid-template-areas:
-      'desc'
-      'photos'
-      'rooms'
-      'register';
-  }
+  display: grid;
+  grid-template-areas:
+    'desc'
+    'photos'
+    'rooms'
+    'register';
+}
 
 /* membership page */
-.memebership-page{
+.memebership-page {
   display: grid;
   grid-template-columns: 1.618fr 1fr;
   max-width: 1200px;
 }
 
 aside {
-  display: grid; 
+  display: grid;
   row-gap: 3em;
   align-items: start;
   align-content: start;
   align-self: start;
   padding-left: 6em;
-
 }
 
 table {
@@ -343,17 +358,14 @@ td {
 
 .conference {
   background-color: #9dced2;
-  padding: 1rem 0;
 }
 
 .indep {
   background-color: #9fd1a9;
-  padding: 1rem 0;
 }
 
 .casual {
   background-color: #e1b7b7;
-  padding: 1rem 0 2.1rem;
 }
 
 label {
@@ -378,4 +390,5 @@ button {
 button:hover {
   background-color: #2e5077;
   color: #fcbf49;
+  transition: all 0.3s ease-out;
 }

@@ -27,4 +27,6 @@ The layout for all pages mainly used CSS Grid
 **1.** In database.php/database.php lines 40-49, we used sql injection prevention method.
 
 
-## Transition ## 
+## Transition ##  
+
+**1.** When you open the home page, context will appear at different time.

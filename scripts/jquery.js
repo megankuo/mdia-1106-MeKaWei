@@ -8,11 +8,9 @@ $(function () {
     } else {
       $('nav').removeClass('sticky-bar');
     }
+  });
 
-    if ($(document).scrollTop() > vh) {
-      $('p').addClass('test');
-    } else {
-      $('p').removeClass('test');
-    }
+  $('.hamburger').on('click', () => {
+    $('#nav-links').addClass('show');
   });
 });

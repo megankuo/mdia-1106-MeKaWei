@@ -55,7 +55,7 @@ main {
 section {
   margin: 10px auto;
   max-width: 1200px;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   display: grid;
   justify-content: center;
@@ -100,10 +100,34 @@ strong {
 
 /* Navigation */
 
+/* Hamburger Menu */
+/* .hamburger {
+  background-color: transparent;
+  border: 0;
+  display: block; /* Hides hamburger menu icon on desktop version 
+  color: #4c4c7c;
+  cursor: pointer;
+  font-size: 25px;
+  align-items: right;
+  margin-right: 10px;
+} */
+
+/* .hamburger:focus {
+  outline: none;
+} */
+
 .sticky-bar {
   position: sticky;
   top: 0px;
+  /* overflow: hidden;
+  background-color: #333;
+  position: relative; */
 }
+
+/* nav {
+  display: flex;
+  justify-content: space-between;
+} */
 
 nav ul {
   list-style-type: none;
@@ -112,6 +136,14 @@ nav ul {
   overflow: hidden;
   background-color: #2e5077;
   text-align: center;
+/* 
+  display: none;
+  flex-direction: column;
+  width: 100%; */
+}
+
+nav ul.show {
+  display: flex;
 }
 
 nav li {
@@ -135,11 +167,11 @@ nav li a:hover {
   color: #2e5077;
 }
 
-.user-icon {
+/* .user-icon {
   height: 28px;
   position: relative;
   top: 10px;
-}
+} */
 
 .logo-top {
   display: block;
@@ -181,7 +213,7 @@ nav li a:hover {
   animation-fill-mode: forwards;
 }
 
-p {
+#about p {
   position: relative;
   animation: slideInRight;
   animation-delay: 0.6s;
@@ -189,7 +221,7 @@ p {
   animation-fill-mode: forwards;
 }
 
-.cta-trial {
+.slideInLeft {
   position: relative;
   animation: slideInLeft;
   animation-delay: 1.2s;
@@ -218,7 +250,7 @@ p {
 /* Section Photos */
 .grid-area-photos {
   grid-area: photos;
-  /* height: 100vh */
+  height: 100vh;
 }
 
 .image-home,
@@ -229,6 +261,7 @@ p {
 .image-home {
   object-fit: cover;
   height: 50vh;
+  width: 100vw;
   /* grid-area: pic; */
 }
 
@@ -239,15 +272,12 @@ p {
   background: rgba(255, 255, 255, 0.8);
   margin: 0;
   padding: 0.2em;
+  width: 100%;
 }
 
 .grid-item-home {
   display: grid;
-  /* grid-template-areas:
-      'header'
-      'pic';
-    direction: rtl; */
-  height: 50vh;
+  justify-items: center;
 }
 
 .room {
@@ -255,6 +285,18 @@ p {
 }
 
 /* Section Rooms */
+
+.conference {
+  background-color: #9dced2;
+}
+
+.indep {
+  background-color: #9fd1a9;
+}
+
+.casual {
+  background-color: #e1b7b7;
+}
 
 /* Slideshow container */
 .slideshow-container {
@@ -294,7 +336,7 @@ p {
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(252, 191, 73, 0.8);
 }
 
 /* Caption text */
@@ -346,7 +388,7 @@ input[type='text'],
 input[type='password'] {
   width: 90%;
   padding: 15px;
-  margin: 5px 0 22px 0;
+  margin: 5px auto 22px;
   display: inline-block;
   border: none;
   background: #f1f1f1;
@@ -358,9 +400,28 @@ input[type='password']:focus {
   outline: none;
 }
 
+button {
+  margin: 0 auto;
+  background-color: #fcbf49;
+  border-radius: 12px;
+  border: 0;
+  display: inline-block;
+  font: bold 1.5em 'Cinzel', serif;
+  color: #2e5077;
+  padding: 5px 10px;
+  width: calc(90% + 30px);
+}
+
+button:hover {
+  background-color: #2e5077;
+  color: #fcbf49;
+  transition: all 0.3s ease-out;
+}
+
 /* Layout */
 .main-home {
   display: grid;
+  justify-items: center;
   grid-template-areas:
     'desc'
     'photos'
@@ -368,14 +429,129 @@ input[type='password']:focus {
     'register';
 }
 
+/*** Footer ***/
+
+footer {
+  background-color: #9dced2;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+}
+
+#contact {
+  margin: 0;
+  padding: 0;
+}
+
+#contact p {
+  font-size: 0.7rem;
+  line-height: normal;
+}
+
+#social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#disclaimer {
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  top: 15px;
+  height: 20px;
+}
+
+#disclaimer p {
+  padding-top: 0;
+  font-size: 0.7rem;
+  line-height: normal;
+}
+
 /* Desktop */
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 800px) {
   body {
     font-size: 12pt;
   }
 
   h1 {
-  font-size: 48px;
-  margin: 0.3em auto;
-}
+    font-size: 48px;
+    margin: 0.3em auto;
+  }
+
+  #features,
+  #rooms,
+  #register {
+    height: min-content;
+    min-height: 0px;
+    margin: 5em 0;
+  }
+  /* Section Photos */
+
+  .grid-container-home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+
+  .grid-item-home {
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .image-home {
+    height: 50vh;
+    width: 100%;
+    /* grid-area: pic; */
+  }
+
+  /* Section Dscription */
+  .description {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+    max-width: 800px;
+    justify-self: center;
+    padding: 0 10px;
+  }
+
+  .description p {
+    max-width: 800px;
+    text-align: center;
+  }
+
+  /* Rooms */
+  .prev,
+  .next {
+    top: 40%;
+  }
+
+  /* Register */
+  #register {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #register h2 {
+    grid-column: 1 / 4;
+  }
+
+  #register .container {
+    grid-column: 1 /2;
+  }
+
+  .registerForm {
+    grid-column: 2 /3;
+  }
 }

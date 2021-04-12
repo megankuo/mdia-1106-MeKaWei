@@ -1,20 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700|Montserrat:300,400,500,700|Nunito:300,400,600,700');
 
-
 /* Mobile CSS */
-html {
-  /* height: 100%; */
-  box-sizing: border-box;
-}
 
 body {
-  /* background-color: aqua; */
   font-size: 15pt;
-  /* min-height: 100%; */
-  /* box-sizing: border-box; */
+  margin: 0;
   font-family: 'Raleway', sans-serif;
   color: #3c4043;
-  margin: 0 8px;
+
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -290,6 +283,10 @@ nav li a:hover {
 
 /* Section Rooms */
 
+#rooms {
+  height: calc(100vh - 262px);
+}
+
 .conference {
   background-color: #9dced2;
 }
@@ -486,21 +483,20 @@ footer {
 /* --------------all menu ---------------*/
 /*-----1.card flipping-----------*/
 
-
 .card-container {
   height: 200px;
   perspective: 600;
   position: relative;
   width: 150px;
-  padding: 10px;;
+  padding: 10px;
 }
 
-.card{
-  position:absolute;
+.card {
+  position: absolute;
   transform-style: preserve-3d;
   transition: all 1s ease-in-out;
   height: 80%;
-  width: 80%
+  width: 80%;
 }
 
 /* .card:hover {
@@ -514,19 +510,18 @@ footer {
   position: absolute;
   width: 100%;
 }
-.card .back{
+.card .back {
   background: #eaeaed;
   color: #0087cc;
   text-align: center;
   transform: rotateY(180deg);
 }
 
-
 .card.flipped {
-  -webkit-transform: rotateY( 180deg );
-  -moz-transform: rotateY( 180deg );
-  -o-transform: rotateY( 180deg );
-  transform: rotateY( 180deg );
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 /* 2------small dot boarder----------*/
@@ -534,30 +529,22 @@ footer {
   border-width: 5px;
 }
 
-
 /*new bbt page*/
-.grid-item-middle{
-  display:none;
+.grid-item-middle {
+  display: none;
 }
 
 .cake-container {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  margin:auto;
-  padding:10px;
-
+  margin: auto;
+  padding: 10px;
 }
 
-
-.title-only-show-in-mobile{
+.title-only-show-in-mobile {
   display: block;
   text-align: center;
 }
-
-
-
-
-
 
 /* Desktop */
 @media screen and (min-width: 800px) {
@@ -574,7 +561,6 @@ footer {
   #rooms,
   #register {
     height: min-content;
-    min-height: 0px;
     margin: 5em 0;
   }
   /* Section Photos */
@@ -635,15 +621,11 @@ footer {
     grid-column: 2 /3;
   }
 
-  .title-only-show-in-mobile{
+  .title-only-show-in-mobile {
     display: none;
   }
 
-
-
-  .grid-item-middle{
-    display:inline-block;
+  .grid-item-middle {
+    display: inline-block;
   }
-  
 }
-

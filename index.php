@@ -1,3 +1,14 @@
+<?php
+  // error reporting
+  error_reporting(E_ALL);
+  ini_set('display_errors', 1);
+
+  // Import functions
+  include './review/database.php/database.php';
+
+  // Validate form submission
+  register_user();
+ ?>
 <!DOCTYPE html>
 <html>
 
@@ -5,7 +16,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>MeKaWei Bubble Tea Cafe</title>
-  <script src="script.js" charset="utf-8"></script>
+  <script src="scripts/jquery.js" charset="utf-8"></script>
   <!-- <link href="style.css" rel="stylesheet" type="text/css" /> -->
   <link href="mobile.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -21,11 +32,12 @@
     <a href="index.html"> <img class="logo-top" src="images/Logo.png"></a>
 
   </header>
-  <nav id="hamnav" role="navigation">
-    <label for="hamburger">&#9776;</label>
-    <input type="checkbox" id="hamburger" />
+  <nav class="sticky-bar" role="navigation">
+    <!-- <button class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </button> -->
 
-    <ul id="hamitems">
+    <ul id="nav-links">
 
       <li><a href="#about">About Us</a></li>
       <li><a href="bbt-menu.html">Bubble Tea Menu</a></li>
@@ -35,8 +47,6 @@
 
     </ul>
   </nav>
-
-
   <main class="main-home">
     <section class="grid-area-photos" id="features">
       <div class="grid-container-home">
@@ -98,7 +108,7 @@
         <!-- Full-width images with number and caption text -->
         <div class="carousel fade">
 
-          <img src="images/work/conference.png" style="width:100%">
+          <img src="./images/work/conference.png" style="width:100%">
           <div class="room-desc conference">
             <h3>CONFERENCE ROOMS:</h3>
             <p>
@@ -112,7 +122,7 @@
 
         <div class="carousel fade">
 
-          <img src="images/work/study.png" style="width:100%">
+          <img src="./images/work/study.png" style="width:100%">
           <div class="room-desc indep">
             <h3>INDEPENDENT QUIET FLOOR:</h3>
             <p>
@@ -126,7 +136,7 @@
 
         <div class="carousel fade">
 
-          <img src="images/work/talkingroom.png" style="width:100%">
+          <img src="./images/work/talkingroom.png" style="width:100%">
           <div class="room-desc casual">
             <h3>CASUAL FLOOR:</h3>
             <p>
@@ -155,18 +165,18 @@
           <li> Normal Membership: $100/month
         </ul>
       </div>
-      <form class="registerForm" action="register.php">
+      <form class="registerForm" action="index.php" method="POST">
         <h3>Sign-up here </h3>
         <div class="container">
           <label for="email"><b>Enter Your Email </b></label>
           <input type="email" placeholder="Enter Email" name="email" required>
-
+          <?php the_validation_message('email'); ?>
           <label for="psw"><b>Enter Password</b></label>
           <input type="password" placeholder="Enter Password" name="psw" required>
-
+          <?php the_validation_message('psw'); ?>
           <label for="psw-repeat"><b>Repeat Password</b></label>
           <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-
+          <?php the_validation_message('psw-repeat'); ?>
           <button type="submit">Sign up now</button>
         </div>
 

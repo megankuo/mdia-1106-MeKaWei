@@ -18,23 +18,25 @@
   </head>
 
   <body>
-    <header>
-      <a href="index.html"> <img class="logo-top" src="images/Logo.png" /></a>
-      <nav>
-        <ul>
-          <li><a href="../index.html">Who We Are</a></li>
-          <li><a href="../bbt-menu.html">Bubble Tea Menu</a></li>
-          <li><a href="../dessert-menu.html">Dessert Menu</a></li>
-          <li><a href="../membership.html">Membership</a></li>
-          
-          <li>
-            <img class="user-icon" src="images/user-icon.png" /><a href="membership.html">
-              Login</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
+  <header>
+    <a href="index.html"> <img class="logo-top" src="../images/Logo.png"></a>
+
+  </header>
+  <nav class="sticky-bar" role="navigation">
+    <!-- <button class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </button> -->
+
+    <ul id="nav-links">
+
+      <li><a href="../index.html#about">About Us</a></li>
+      <li><a href="../bbt-menu.html">Bubble Tea Menu</a></li>
+      <li><a href="../dessert-menu.html">Dessert Menu</a></li>
+      <li><a href="../index.html#register">Membership</a></li>
+      <li><a href="index.php">Reviews</a></li>
+
+    </ul>
+  </nav>
     <main>
       <section>
 

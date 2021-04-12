@@ -1,3 +1,26 @@
+
+$(document).ready(function(){
+
+$('.card').click(function(){
+    $(this).toggleClass('flipped');
+  })
+
+//nav bar
+  var vh = window.innerHeight;
+  $(window).on('scroll', () => {
+    let distance = $(window).scrollTop();
+    if (distance > $('header').height()) {
+      $('nav').addClass('sticky-bar');
+    } else {
+      $('nav').removeClass('sticky-bar');
+    }
+  });
+});
+
+
+
+//homepage slideshow
+
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -10,6 +33,7 @@ function plusSlides(n) {
 function currentSlide(n) {
   showSlides((slideIndex = n));
 }
+
 
 function showSlides(n) {
   var i;
@@ -30,3 +54,5 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = 'block';
   dots[slideIndex - 1].className += ' active';
 }
+
+

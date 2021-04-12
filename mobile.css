@@ -1,20 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700|Montserrat:300,400,500,700|Nunito:300,400,600,700');
 
-
 /* Mobile CSS */
-html {
-  /* height: 100%; */
-  box-sizing: border-box;
-}
 
 body {
-  /* background-color: aqua; */
   font-size: 15pt;
-  /* min-height: 100%; */
-  /* box-sizing: border-box; */
+  margin: 0;
   font-family: 'Raleway', sans-serif;
   color: #3c4043;
-  margin: 0 8px;
+
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -49,8 +42,6 @@ main {
   background-image: url('./images/mountain background.png');
   background-repeat: no-repeat;
   background-position: center bottom;
-  /* margin: 0 auto; */
-  /* width: 100vw; */
   flex-grow: 2;
   padding: 0;
 }
@@ -122,9 +113,6 @@ strong {
 .sticky-bar {
   position: sticky;
   top: 0px;
-  /* overflow: hidden;
-  background-color: #333;
-  position: relative; */
   z-index: 5;
 }
 
@@ -171,15 +159,9 @@ nav li a:hover {
   color: #2e5077;
 }
 
-/* .user-icon {
-  height: 28px;
-  position: relative;
-  top: 10px;
-} */
-
 .logo-top {
   display: block;
-  width: 150px;
+  width: 120px;
   margin: 0 auto;
 }
 
@@ -290,6 +272,10 @@ nav li a:hover {
 
 /* Section Rooms */
 
+#rooms {
+  height: calc(100vh - 262px);
+}
+
 .conference {
   background-color: #9dced2;
 }
@@ -388,7 +374,7 @@ nav li a:hover {
 /* Section Register */
 
 /* Register form */
-input[type='text'],
+input[type='email'],
 input[type='password'] {
   width: 90%;
   padding: 15px;
@@ -398,7 +384,7 @@ input[type='password'] {
   background: #f1f1f1;
 }
 
-input[type='text']:focus,
+input[type='email']:focus,
 input[type='password']:focus {
   background-color: #ddd;
   outline: none;
@@ -486,21 +472,20 @@ footer {
 /* --------------all menu ---------------*/
 /*-----1.card flipping-----------*/
 
-
 .card-container {
   height: 200px;
   perspective: 600;
   position: relative;
   width: 150px;
-  padding: 10px;;
+  padding: 10px;
 }
 
-.card{
-  position:absolute;
+.card {
+  position: absolute;
   transform-style: preserve-3d;
   transition: all 1s ease-in-out;
   height: 80%;
-  width: 80%
+  width: 80%;
 }
 
 /* .card:hover {
@@ -514,19 +499,18 @@ footer {
   position: absolute;
   width: 100%;
 }
-.card .back{
+.card .back {
   background: #eaeaed;
   color: #0087cc;
   text-align: center;
   transform: rotateY(180deg);
 }
 
-
 .card.flipped {
-  -webkit-transform: rotateY( 180deg );
-  -moz-transform: rotateY( 180deg );
-  -o-transform: rotateY( 180deg );
-  transform: rotateY( 180deg );
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 /* 2------small dot boarder----------*/
@@ -534,30 +518,22 @@ footer {
   border-width: 5px;
 }
 
-
 /*new bbt page*/
-.grid-item-middle{
-  display:none;
+.grid-item-middle {
+  display: none;
 }
 
 .cake-container {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  margin:auto;
-  padding:10px;
-
+  margin: auto;
+  padding: 10px;
 }
 
-
-.title-only-show-in-mobile{
+.title-only-show-in-mobile {
   display: block;
   text-align: center;
 }
-
-
-
-
-
 
 /* Desktop */
 @media screen and (min-width: 800px) {
@@ -574,7 +550,6 @@ footer {
   #rooms,
   #register {
     height: min-content;
-    min-height: 0px;
     margin: 5em 0;
   }
   /* Section Photos */
@@ -635,15 +610,11 @@ footer {
     grid-column: 2 /3;
   }
 
-  .title-only-show-in-mobile{
+  .title-only-show-in-mobile {
     display: none;
   }
 
-
-
-  .grid-item-middle{
-    display:inline-block;
+  .grid-item-middle {
+    display: inline-block;
   }
-  
 }
-

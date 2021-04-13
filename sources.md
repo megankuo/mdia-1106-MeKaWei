@@ -29,7 +29,31 @@ coffee milk tea with pearls
 https://themovementmenu.com/boba-cold-brew/
 
 
-pearl bun:  
+soufffel-pudding pearl pancake
+https://travel.ettoday.net/article/1164817.htm
+
+pearl bun
+https://www.shidafa.com.tw/order_detail/26
+
+souffle peral pancake
+https://www.youtube.com/watch?v=D03pGf_Lxsw&ab_channel=%E5%A4%8D%E5%8F%A4%E7%B1%B3%E7%B1%B3
+
+
+Thousand layer pearl cake
+https://m.xiachufang.com/recipe/103772991/
+
+pearl bread
+https://www.xiachufang.com/recipe/103341168/
+
+pearl cupcake
+https://www.xiachufang.com/recipe/104066089/
+
+hawaii napoleon cake
+https://www.google.com/search?q=%E6%8B%BF%E7%A0%B4%E4%BB%91%E8%9B%8B%E7%B3%95+%E6%97%A0%E8%8A%B1%E6%9E%9C&tbm=isch&ved=2ahUKEwjJg53bufrvAhWuAzQIHWsVDjIQ2-cCegQIABAA&oq=%E6%8B%BF%E7%A0%B4%E4%BB%91%E8%9B%8B%E7%B3%95+%E6%97%A0%E8%8A%B1%E6%9E%9C&gs_lcp=CgNpbWcQAzoGCAAQDBAYOgQIIxAnOgIIADoECAAQDFCl0AdYouQHYKjlB2gBcAB4AIABqwGIAaQHkgEEMTAuMZgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=ESd1YIm3MK6H0PEP66q4kAM&bih=610&biw=1263&rlz=1C1SQJL_zh-CNCA843CA843&hl=en-GB#imgrc=DqTU4_jZ4b3CIM
+
+matcha roll cake
+https://www.360kuai.com/pc/9f1a61de37cbdf4b3?cota=3&kuai_so=1&sign=360_e39369d1
+
 
 
 

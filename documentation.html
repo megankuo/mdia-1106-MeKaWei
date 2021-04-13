@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>MeKaWei Dessert Menu</title>
+  <link href="styles/review.css" rel="stylesheet" type="text/css" />
+  <link href="styles/mobile.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Raleway:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script language="javascript" type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+  <header>
+    <a href="index.html"> <img class="logo-top" src="images/Logo.png"></a>
+
+  </header>
+  <nav id="hamnav" role="navigation">
+    <label for="hamburger">&#9776;</label>
+    <input type="checkbox" id="hamburger" />
+
+    <ul id="hamitems">
+
+      <li><a href="index.html#about">About Us</a></li>
+      <li><a href="bbt-menu.html">Bubble Tea Menu</a></li>
+      <li><a href="dessert-menu.html">Dessert Menu</a></li>
+      <li><a href="index.html#register">Membership</a></li>
+      <li><a href="review/index.php">Reviews</a></li>
+      <li><a href="documentation.html">Documentation</a></li>
+
+    </ul>
+  </nav>
+  <main>
+    <div class="align-left">
+      <h1 id="introduction-to-mekawei-cafe">Introduction to Mekawei Cafe</h1>
+      <p>Navigate our site using the top navigation bar. The homepage features the about div, a carousel slideshow
+        showcasing the types of work areas at this business, and information about memberships. </p>
+      <p>We have two menu pages where you can click on the images for information about that food or drink item.</p>
+      <p>Lastly, we have a reviews page for our patrons to leave a review of their experiences.</p>
+      <h2 id="jquery-and-javascript">jquery and Javascript</h2>
+      <p><strong>1.</strong> Bubble tea and dessert menu pages: The images on both menus have a flip card function. When
+        you
+        click on the menu item image, the image flips to show the price of the item. This was accomplished using
+        jQuery&#39;s
+        toggle function which would apply a CSS class that uses transform to flip the image.</p>
+      <p><strong>2.</strong> Homepage: A slideshow was created using javascript to showcase the various rooms of our
+        business.
+        The arrows for controlling forwards/backwards are positioned over the image using CSS position property.</p>
+      <h2 id="mobile-friendly">Mobile Friendly</h2>
+      <p>All the pages are designed using a mobile-first approach which we then adapted to suit a larger screen.</p>
+      <h2 id="responsive-design">Responsive Design</h2>
+      <p>Mobile first design approach with a hamburger menu as default navigation bar. Used a breakpoint at 768px to
+        expand
+        the navigation bar. The menus also change layouts to reflect a mobile and a desktop optimized version. The
+        layout
+        for
+        all pages mainly used CSS Grid.</p>
+      <h2 id="animation">Animation</h2>
+      <p><strong>1.</strong> Transitions</p>
+      <ul>
+        <li>All pages: All links have a hover state that uses transition to slowly change the colour of the link.</li>
+        <li>Homepage: The slideshow has transition on the arrows and slide indicators to make the hover over state look
+          less
+          jarring</li>
+        <li>Both Menus: Menu pages use transition with transform to show details of the menu pictures when clicked.</li>
+      </ul>
+      <p><strong>2.</strong> Keyframe Animations</p>
+      <ul>
+        <li>Homepage: The landing page portion of the homepage feature slide in animation.</li>
+        <li>Homepage: The slideshow slides fade in and slide to the right at the same time</li>
+      </ul>
+      <h2 id="validation">Validation</h2>
+      <p><strong>1.</strong> On the review page, users had to insert &quot;@&quot; in the email div and the email is
+        required.</p>
+      <p><strong>2.</strong> On the review page, users had to insert more than 8 characters in the comment input. The
+        comment
+        div is required.</p>
+      <p><strong>3.</strong> Homepage: Register has front end validation for emails.</p>
+      <h2 id="prevent-malicious-activity">Prevent Malicious Activity</h2>
+      <p><strong>1.</strong> In database/database.php lines 40-49, we used sql injection prevention method with pdo
+        prepared
+        statements.</p>
+      <h2 id="add-to-database">Add to database</h2>
+      <p><strong>1.</strong> Reviews page: Users can submit a review of their experience</p>
+      <h2 id="fetch-dynamic-content">Fetch dynamic content</h2>
+      <p><strong>1.</strong> Reviews page: Reviews are fetched from the database and displayed on the webpage</p>
+    </div>
+    <div class="align-left">
+      <h1 id="code-sources">Code Sources</h1>
+      <p><a
+          href="https://www.w3schools.com/tags/att_input_required.asp">https://www.w3schools.com/tags/att_input_required.asp</a><br>
+        <a
+          href="https://www.w3schools.com/howto/howto_js_slideshow.asp">https://www.w3schools.com/howto/howto_js_slideshow.asp</a>
+      </p>
+    </div>
+    <div class="align-left">
+      <h1 id="images">Images</h1>
+      <p>Landing page background<br><a
+          href="https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=3450&amp;q=80">https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=3450&amp;q=80</a>
+      </p>
+      <p>Homepage cake<br><a
+          href="https://images.unsplash.com/photo-1587314168485-3236d6710814?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2170&amp;q=80">https://images.unsplash.com/photo-1587314168485-3236d6710814?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2170&amp;q=80</a>
+      </p>
+      <p>Homepage bubble tea drink<br><a
+          href="https://images.unsplash.com/photo-1501199532894-9449c0a85a77?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=934&amp;q=80">https://images.unsplash.com/photo-1501199532894-9449c0a85a77?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=934&amp;q=80</a>
+      </p>
+      <p>Office img (with laptop)<br><a
+          href="https://unsplash.com/photos/vjMgqUkS8q8">https://unsplash.com/photos/vjMgqUkS8q8</a></p>
+      <p>Conference room<br><a
+          href="https://unsplash.com/photos/Oalh2MojUuk">https://unsplash.com/photos/Oalh2MojUuk</a>
+      </p>
+      <p>Lounge<br><a href="https://unsplash.com/photos/cLmOptqvuFQ">https://unsplash.com/photos/cLmOptqvuFQ</a></p>
+      <p>strawberry bubble tea<br><a
+          href="https://www.ripplefoods.com/blog/recipes/milk-recipes/strawberry-rose-bubble-tea/">https://www.ripplefoods.com/blog/recipes/milk-recipes/strawberry-rose-bubble-tea/</a>
+      </p>
+      <p>taro bubble tea<br><a
+          href="https://www.hungryhuy.com/taro-milk-tea/">https://www.hungryhuy.com/taro-milk-tea/</a>
+      </p>
+      <p>mango slush with pearls<br><a
+          href="https://producemadesimple.ca/passionfruit-bubble-tea/">https://producemadesimple.ca/passionfruit-bubble-tea/</a>
+      </p>
+      <p>pudding milk tea with pearls<br><a
+          href="https://www.siftandsimmer.com/coco-inspired-egg-custard-bubble-tea/">https://www.siftandsimmer.com/coco-inspired-egg-custard-bubble-tea/</a>
+      </p>
+      <p>brown sugar milk tea with pearls<br><a
+          href="https://www.foxyfolksy.com/brown-sugar-milk-tea/\">https://www.foxyfolksy.com/brown-sugar-milk-tea/\</a>
+      </p>
+      <p>coffee milk tea with pearls<br><a
+          href="https://themovementmenu.com/boba-cold-brew/">https://themovementmenu.com/boba-cold-brew/</a></p>
+      <p>soufffel-pudding pearl pancake<br><a
+          href="https://travel.ettoday.net/article/1164817.htm">https://travel.ettoday.net/article/1164817.htm</a></p>
+      <p>pearl bun<br><a
+          href="https://www.shidafa.com.tw/order_detail/26">https://www.shidafa.com.tw/order_detail/26</a>
+      </p>
+      <p>souffle pearl pancake<br><a
+          href="https://www.youtube.com/watch?v=D03pGf_Lxsw&amp;ab_channel=%E5%A4%8D%E5%8F%A4%E7%B1%B3%E7%B1%B3">https://www.youtube.com/watch?v=D03pGf_Lxsw&amp;ab_channel=%E5%A4%8D%E5%8F%A4%E7%B1%B3%E7%B1%B3</a>
+      </p>
+      <p>Thousand layer pearl cake<br><a
+          href="https://m.xiachufang.com/recipe/103772991/">https://m.xiachufang.com/recipe/103772991/</a></p>
+      <p>pearl bread<br><a
+          href="https://www.xiachufang.com/recipe/103341168/">https://www.xiachufang.com/recipe/103341168/</a></p>
+      <p>pearl cupcake<br><a
+          href="https://www.xiachufang.com/recipe/104066089/">https://www.xiachufang.com/recipe/104066089/</a></p>
+      <p>hawaii napoleon cake<br><a
+          href="https://aclassictwist.com/how-to-make-a-number-cake/">https://aclassictwist.com/how-to-make-a-number-cake/</a>
+      </p>
+      <p>matcha roll cake<br><a
+          href="https://www.360kuai.com/pc/9f1a61de37cbdf4b3?cota=3&amp;kuai_so=1&amp;sign=360_e39369d1">https://www.360kuai.com/pc/9f1a61de37cbdf4b3?cota=3&amp;kuai_so=1&amp;sign=360_e39369d1</a>
+      </p>
+    </div>
+
+  </main>
+  <footer>
+    <div class="footer-content">
+      <div id="contact">
+        <p>
+          Location: 1111 W Media St #1111-1111 <br />
+          in Royal Center, Vancouver, BC <br />
+          Contact: 604-111-1111
+        </p>
+      </div>
+
+      <div id="disclaimer">
+        <p>
+          For Educational Purposes Only <br />
+          <a href="https://www.vecteezy.com/free-vector/icons">Icons Vectors by Vecteezy</a>
+        </p>
+      </div>
+
+      <div id="social">
+        <img src="images/icon-fb.png" alt="Facebook" class="social-icon" />
+        <img src="images/icon-ig.png" alt="Instagram" class="social-icon" />
+        <img src="images/icon-twitter.png" alt="Twitter" class="social-icon" />
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  </script>
+</body>
+
+</html>

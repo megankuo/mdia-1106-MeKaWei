@@ -5,8 +5,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
   <title>MeKaWei Dessert Menu</title>
-  <link href="../../styles/review.css" rel="stylesheet" type="text/css" />
-  <link href="../../styles/mobile.css" rel="stylesheet" type="text/css" />
+  <link href="../styles/review.css" rel="stylesheet" type="text/css" />
+  <link href="../styles/mobile.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link
     href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Raleway:wght@400;700&display=swap"
@@ -32,6 +32,7 @@
       <li><a href="../dessert-menu.html">Dessert Menu</a></li>
       <li><a href="../index.html#register">Membership</a></li>
       <li><a href="index.php">Reviews</a></li>
+      <li><a href="../documentation.html">Documentation</a></li>
 
     </ul>
   </nav>

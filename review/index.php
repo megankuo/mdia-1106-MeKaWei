@@ -7,7 +7,7 @@ $posts = [];
 // array of unique commenter email addresses
 $commenters = [];
 
- require_once 'database.php/database.php';
+ require_once 'database/database.php';
  require_once 'templates/functions/template_functions.php';
 
 //connect to database: PHP Data object representing Database connection

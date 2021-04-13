@@ -35,10 +35,13 @@ The layout for all pages mainly used CSS Grid.
 
 ## Prevent Malicious Activity ##
 
-**1.** In database.php/database.php lines 40-49, we used sql injection prevention method.
+**1.** In database.php/database.php lines 40-49, we used sql injection prevention method with pdo prepared statements.
 
 
-## Transition ##  
+## Add to database ##
 
-**1.** When you open the home page, context will appear at different time.
+**1.** Reviews page: Users can submit a review of their experience
 
+## Fetch dynamic content ##
+
+**1.** Reviews page: Reviews are fetched from the database and displayed on the webpage

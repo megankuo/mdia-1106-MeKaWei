@@ -42,7 +42,7 @@ section {
   margin: 10px auto;
   max-width: 1200px;
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 53px);
   display: grid;
   justify-content: center;
   align-content: center;
@@ -231,7 +231,7 @@ nav li a {
 
 @keyframes slideInLeft {
   from {
-    left: -1000px;
+    left: -100%;
   }
   to {
     left: 0px;
@@ -240,7 +240,7 @@ nav li a {
 
 @keyframes slideInRight {
   from {
-    right: -1000px;
+    right: -100%;
   }
   to {
     right: 0px;
@@ -251,7 +251,6 @@ nav li a {
 
 .grid-area-photos {
   grid-area: photos;
-  height: 100vh;
 }
 
 .image-home, .card-header {
@@ -261,7 +260,7 @@ nav li a {
 
 .image-home {
   object-fit: cover;
-  height: 50vh;
+  height: 45vh;
   width: 100%;
   /* grid-area: pic; */
 }
@@ -581,8 +580,8 @@ footer {
     margin: 0.3em auto;
   }
   #features, #rooms, #register {
-    height: min-content;
-    margin: 5em 0;
+    /* height: 30vh; */
+    margin: 53px 0 0;
   }
   /* Navbar */
   /* Hide Hamburger */
@@ -621,13 +620,6 @@ footer {
   .description p {
     max-width: 800px;
     text-align: center;
-  }
-  #about p {
-    position: relative;
-    animation: slideInRight;
-    animation-delay: 0.6s;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
   }
   /* Rooms */
   .prev, .next {

@@ -71,9 +71,9 @@ function validate()
     $result = $result && $this_result;
     $valid = $result;
   } // end of check for form format
-  else {
-    echo "<strong>Something has gone wrong with the form!</strong>";
-  }
+  // else {
+  //   echo "<strong>Something has gone wrong with the form!</strong>";
+  // }
 }
 
 // Display error message if field not valid. Displays nothing if the field is valid.

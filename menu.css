@@ -1,0 +1,64 @@
+/*** Both Menus ***/
+
+
+
+.menu {
+  list-style-type: none;
+  margin: 0 4em;
+}
+
+.menu li {
+  margin-bottom: 3em;
+}
+
+.grid-item-middle img {
+  width: 100%;
+  margin: 20% 0 10%;
+}
+
+
+
+.menu-item {
+  max-width: 100%;
+  border-style: dotted;
+  border-width: 10px;
+  border-color: #fcbf49;
+  padding: 10px; 
+  /* animation:spin 10s linear infinite;  */
+}
+
+
+/* @keyframes spin { 
+  100% { 
+    transform: rotateZ(360deg);
+  }
+} */
+
+
+/* card back only shows in mobile  */
+.card-back{
+  display:none
+}
+
+.menu-item:hover {
+  border-color: #e1b7b7;
+}
+
+/* dessert menu */
+
+.cake-container {
+  background-color: #9dced2;
+}
+
+
+/*bubble tea menu */
+
+.tea-container {
+  background-color: #9fd1a9;
+}
+
+.title-only-show-in-mobile{
+  display: none;
+}
+
+

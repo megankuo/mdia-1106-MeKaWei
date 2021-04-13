@@ -1,100 +1,91 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>MeKaWei Dessert Menu</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link href="mobile.css" rel="stylesheet" type="text/css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Raleway:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="script.js" charset="utf-8"></script>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>MeKaWei Dessert Menu</title>
+  <link href="menu.css" rel="stylesheet" type="text/css" />
+  <link href="mobile.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Raleway:wght@400;700&display=swap"
+    rel="stylesheet" />
 
-  <body>
-    <header>
-      <a href="index.html"> <img class="logo-top" src="images/Logo.png"></a>
-  
-    </header>
-    <nav class="sticky-bar" role="navigation">
-      <!-- <button class="hamburger" id="hamburger">
-        <i class="fas fa-bars"></i>
-      </button> -->
-  
-      <ul id="nav-links">
-  
-        <li><a href="index.html#about">About Us</a></li>
-        <li><a href="bbt-menu.html">Bubble Tea Menu</a></li>
-        <li><a href="dessert-menu.html">Dessert Menu</a></li>
-        <li><a href="index.html#register">Membership</a></li>
-        <li><a href="review/index.php">Reviews</a></li>
-  
-      </ul>
-    </nav>
-    <main>
-      <section>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="script.js" charset="utf-8"></script>
+</head>
 
-        <!-- this header only show in mobile version -->
-        <div class = "title-only-show-in-mobile">
-          <!-- <img src="./images/bubbletea/bbt-menu.png" alt="Bubble Tea Menu" srcset="" /> -->
-          <h1>Desert Menu</h1>
-        </div>
+<body>
+  <header>
+    <a href="index.html"> <img class="logo-top" src="images/Logo.png"></a>
 
-        <div class="grid-container cake-container">
-          
-          <!-- Left Column -->
-          <div class="grid-item">
+  </header>
+  <nav id="hamnav" role="navigation">
+    <label for="hamburger">&#9776;</label>
+    <input type="checkbox" id="hamburger" />
 
-            <div class ="card-container">
-              <div class="card">
-                <div class="side">
-                  <img
-                    class="menu-item"
-                    src="./images/desserts/pudding.png"
-                    alt="Souffle-Pudding Pearl Pancake"
-                  />
-                  <h6>Souffle-Pudding Pearl Pancake</h6>
-                </div>
-              
-                <div class="side back">
-                  <h3>Souffle-pudding Pearl Pancake</h3>
-                  <p>
-                    Party-size (shared by 4 people): $60<br />
-                    One slice (for one person): $15
-                  </p>
-                </div>
+    <ul id="hamitems">
+
+      <li><a href="index.html#about">About Us</a></li>
+      <li><a href="bbt-menu.html">Bubble Tea Menu</a></li>
+      <li><a href="dessert-menu.html">Dessert Menu</a></li>
+      <li><a href="index.html#register">Membership</a></li>
+      <li><a href="review/index.php">Reviews</a></li>
+
+    </ul>
+  </nav>
+  <main>
+    <section>
+
+      <!-- this header only show in mobile version -->
+      <div class="title-only-show-in-mobile">
+        <!-- <img src="./images/bubbletea/bbt-menu.png" alt="Bubble Tea Menu" srcset="" /> -->
+        <h1>Desert Menu</h1>
+      </div>
+
+      <div class="grid-container cake-container">
+
+        <!-- Left Column -->
+        <div class="grid-item">
+
+          <div class="card-container">
+            <div class="card">
+              <div class="side">
+                <img class="menu-item" src="./images/desserts/pudding.png" alt="Souffle-Pudding Pearl Pancake" />
+                <h6>Souffle-Pudding Pearl Pancake</h6>
+              </div>
+
+              <div class="side back">
+                <h3>Souffle-pudding Pearl Pancake</h3>
+                <p>
+                  Party-size (shared by 4 people): $60<br />
+                  One slice (for one person): $15
+                </p>
               </div>
             </div>
-            
-            <div class ="card-container">
-              <div class="card">
-                <div class="side">
-                  <img class="menu-item" src="./images/desserts/layerscake.png" alt="layerscake" />
-                  <h6>Thousand Layer Pearl Cake</h6>
-                </div>
+          </div>
 
-                <div class="side back">
-                  <h3>Thousand Layer Pearl Cake</h3>
-                  <p>One box (for one person): $15</p>
-                </div>
+          <div class="card-container">
+            <div class="card">
+              <div class="side">
+                <img class="menu-item" src="./images/desserts/layerscake.png" alt="layerscake" />
+                <h6>Thousand Layer Pearl Cake</h6>
+              </div>
+
+              <div class="side back">
+                <h3>Thousand Layer Pearl Cake</h3>
+                <p>One box (for one person): $15</p>
               </div>
             </div>
+          </div>
 
-            <div class ="card-container">
-              <div class="card">
-                <div class="side">
-                  <img
-                    class="menu-item"
-                    src="./images/desserts/pancake.png"
-                    alt="souffle pearl pancake"
-                  />
-                  <h6>Souffle Pearl Pancake</h6>
-                </div>
+          <div class="card-container">
+            <div class="card">
+              <div class="side">
+                <img class="menu-item" src="./images/desserts/pancake.png" alt="souffle pearl pancake" />
+                <h6>Souffle Pearl Pancake</h6>
+              </div>
 
               <div class="side back">
                 <h3>Souffle Pearl Pancake</h3>
@@ -102,170 +93,171 @@
                   Party-size (shared for 4 people): $55<br />
                   One piece (for one person): $15
                 </p>
-                </div>
-              </div>
-            </div>
-
-
-            <div class ="card-container">
-              <div class="card">
-                <div class="side">
-                  <img class="menu-item" src="./images/desserts/bread.png" alt="bread" />
-                  <h6>Pearl Bread</h6>
-                </div>
-
-                <div class="side back">
-                  <h3>Pearls Bread</h3>
-                  <p>
-                    Party-size (shared by 6 people): $50<br />
-                    One slice (for one person): $10
-                  </p>
-                </div>
               </div>
             </div>
           </div>
 
-          <!-- Middle Column -->
-          <div class="grid-item-middle">
-            <img src="./images/desserts/dessert-menu.png" alt="Dessert Menu" srcset="" />
-            <ul class="menu">
-              <li>
-                <h3>Souffle-pudding Pearl Pancake</h3>
-                <p>
-                  Party-size (shared by 4 people): $60<br />
-                  One slice (for one person): $15
-                </p>
-              </li>
-              <li>
-                <h3>Pearl Bun</h3>
-                <p>One cupcake (for one person): $15</p>
-              </li>
-              <li>
-                <h3>Thousand Layer Pearl Cake</h3>
-                <p>One box (for one person): $15</p>
-              </li>
-              <li>
-                <h3>Pearls Cupcake</h3>
-                <p>
-                  Party-size (6 cupcakes): $60<br />
-                  One cupcake (for one person): $12
-                </p>
-              </li>
-              <li>
-                <h3>Souffle Pearl Pancake</h3>
-                <p>
-                  Party-size (shared for 4 people): $55<br />
-                  One piece (for one person): $15
-                </p>
-              </li>
-              <li>
-                <h3>Hawaii Napoleon Cake</h3>
-                <p>One piece (for one person): $15</p>
-              </li>
-              <li>
+
+          <div class="card-container">
+            <div class="card">
+              <div class="side">
+                <img class="menu-item" src="./images/desserts/bread.png" alt="bread" />
+                <h6>Pearl Bread</h6>
+              </div>
+
+              <div class="side back">
                 <h3>Pearls Bread</h3>
                 <p>
                   Party-size (shared by 6 people): $50<br />
                   One slice (for one person): $10
                 </p>
-              </li>
-              <li>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Middle Column -->
+        <div class="grid-item-middle">
+          <img src="./images/desserts/dessert-menu.png" alt="Dessert Menu" srcset="" />
+          <ul class="menu">
+            <li>
+              <h3>Souffle-pudding Pearl Pancake</h3>
+              <p>
+                Party-size (shared by 4 people): $60<br />
+                One slice (for one person): $15
+              </p>
+            </li>
+            <li>
+              <h3>Pearl Bun</h3>
+              <p>One cupcake (for one person): $15</p>
+            </li>
+            <li>
+              <h3>Thousand Layer Pearl Cake</h3>
+              <p>One box (for one person): $15</p>
+            </li>
+            <li>
+              <h3>Pearls Cupcake</h3>
+              <p>
+                Party-size (6 cupcakes): $60<br />
+                One cupcake (for one person): $12
+              </p>
+            </li>
+            <li>
+              <h3>Souffle Pearl Pancake</h3>
+              <p>
+                Party-size (shared for 4 people): $55<br />
+                One piece (for one person): $15
+              </p>
+            </li>
+            <li>
+              <h3>Hawaii Napoleon Cake</h3>
+              <p>One piece (for one person): $15</p>
+            </li>
+            <li>
+              <h3>Pearls Bread</h3>
+              <p>
+                Party-size (shared by 6 people): $50<br />
+                One slice (for one person): $10
+              </p>
+            </li>
+            <li>
+              <h3>Matcha Roll Cake</h3>
+              <p>
+                Party-size (share by 5 people): $55<br />
+                Once slice (for one people): $12
+              </p>
+            </li>
+          </ul>
+        </div>
+        <!-- Right Column -->
+        <div class="grid-item">
+          <div class="card-container">
+            <div class="card">
+              <div class="side">
+                <img class="menu-item" src="./images/desserts/bun.png" alt="bun" />
+                <h6>Pearl Bun</h6>
+              </div>
+              <div class="side back">
+                <h3>Pearl Bun</h3>
+                <p>One cupcake (for one person): $15</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-container">
+            <div class="card">
+              <div class="side">
+                <img class="menu-item" src="./images/desserts/cupcake.png" alt="cupcake" />
+                <h6>Pearl Cupcake</h6>
+              </div>
+              <div class="side back">
+                <h3>Pearls Cupcake</h3>
+                <p>
+                  Party-size (6 cupcakes): $60<br />
+                  One cupcake (for one person): $12
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-container">
+            <div class="card">
+              <div class="side">
+                <img class="menu-item" src="./images/desserts/napolen.png" alt="napoleon cake" />
+                <h6>Hawaii Napoleon Cake</h6>
+              </div>
+              <div class="side back">
+                <h3>Hawaii Napoleon Cake</h3>
+                <p>One piece (for one person): $15</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-container">
+            <div class="card">
+              <div class="side">
+                <img class="menu-item" src="./images/desserts/rollcake.png" alt="matcha roll cake" />
+                <h6>Matcha Roll Cake</h6>
+              </div>
+              <div class="side back">
                 <h3>Matcha Roll Cake</h3>
                 <p>
                   Party-size (share by 5 people): $55<br />
                   Once slice (for one people): $12
                 </p>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
-          <!-- Right Column -->
-          <div class="grid-item">
-            <div class ="card-container">
-              <div class="card">
-                <div class="side">           
-                  <img class="menu-item" src="./images/desserts/bun.png" alt="bun" />
-                  <h6>Pearl Bun</h6>
-                </div>
-                <div class="side back">
-                  <h3>Pearl Bun</h3>
-                  <p>One cupcake (for one person): $15</p>
-              </div>
-              </div>
-            </div>
-
-            <div class ="card-container">
-              <div class="card">
-                <div class="side">          
-                  <img class="menu-item" src="./images/desserts/cupcake.png" alt="cupcake" />
-                  <h6>Pearl Cupcake</h6>
-                </div>
-                <div class="side back">
-                  <h3>Pearls Cupcake</h3>
-                  <p>
-                    Party-size (6 cupcakes): $60<br />
-                    One cupcake (for one person): $12
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class ="card-container">
-              <div class="card">
-                <div class="side">          
-                  <img class="menu-item" src="./images/desserts/napolen.png" alt="napoleon cake" />
-                  <h6>Hawaii Napoleon Cake</h6>
-                </div>
-                <div class="side back">
-                  <h3>Hawaii Napoleon Cake</h3>
-                  <p>One piece (for one person): $15</p>
-                </div>            
-              </div>
-            </div>
-
-            <div class ="card-container">
-              <div class="card">
-                <div class="side">       
-                  <img class="menu-item" src="./images/desserts/rollcake.png" alt="matcha roll cake" />
-                  <h6>Matcha Roll Cake</h6>
-                </div>
-                <div class="side back">
-                  <h3>Matcha Roll Cake</h3>
-                  <p>
-                    Party-size (share by 5 people): $55<br />
-                    Once slice (for one people): $12
-                  </p>
-                </div>
-              </div>
-           </div>
 
 
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <div class="footer-content">
-        <div id="contact">
-          <p>
-            Location: 1111 W Media St #1111-1111 <br />
-            in Royal Center, Vancouver, BC <br />
-            Contact: 604-111-1111
-          </p>
-        </div>
-
-        <div id="disclaimer">
-          <p>
-            For Educational Purposes Only <br />
-            <a href="https://www.vecteezy.com/free-vector/icons">Icons Vectors by Vecteezy</a>
-          </p>
-        </div>
-
-        <div id="social">
-          <img src="images/icon-fb.png" alt="Facebook" class="social-icon" />
-          <img src="images/icon-ig.png" alt="Instagram" class="social-icon" />
-          <img src="images/icon-twitter.png" alt="Twitter" class="social-icon" />
         </div>
       </div>
-    </footer>
-  </body>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-content">
+      <div id="contact">
+        <p>
+          Location: 1111 W Media St #1111-1111 <br />
+          in Royal Center, Vancouver, BC <br />
+          Contact: 604-111-1111
+        </p>
+      </div>
+
+      <div id="disclaimer">
+        <p>
+          For Educational Purposes Only <br />
+          <a href="https://www.vecteezy.com/free-vector/icons">Icons Vectors by Vecteezy</a>
+        </p>
+      </div>
+
+      <div id="social">
+        <img src="images/icon-fb.png" alt="Facebook" class="social-icon" />
+        <img src="images/icon-ig.png" alt="Instagram" class="social-icon" />
+        <img src="images/icon-twitter.png" alt="Twitter" class="social-icon" />
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>

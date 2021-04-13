@@ -10,6 +10,8 @@ $commenters = [];
  require_once 'database/database.php';
  require_once 'templates/functions/template_functions.php';
 
+// Validate form submission
+validate();
 //connect to database: PHP Data object representing Database connection
 $pdo = db_connect();
 // submit comment to database

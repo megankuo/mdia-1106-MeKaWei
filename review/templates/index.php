@@ -51,6 +51,7 @@
           <label>
             Email Address:
             <input type="email" name="email" required>
+            <?php the_validation_message("email"); ?>
           </label>
           <br>
           <label>
@@ -68,6 +69,7 @@
             Enter a Comment: <br>
             <textarea name="comment" required minlength="8" rows="4"
               placeholder="How was your experience with us?"></textarea>
+            <?php the_validation_message("comment"); ?>
           </label>
 
           <button type="submit" name="button">Post Comment</button>

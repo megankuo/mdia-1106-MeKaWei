@@ -49,7 +49,7 @@
 
           <label>
             Email Address:
-            <input type="email" name="email" required>
+            <input class = "review-input" type="email" name="email" required>
           </label>
           <br>
           <label>

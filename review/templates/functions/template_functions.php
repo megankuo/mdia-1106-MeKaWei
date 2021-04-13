@@ -10,29 +10,29 @@ function the_comments() {
   foreach($posts as $row) {
     ?>
 
-      <div class="comment">
+<div class="comment">
 
-        <div class="ID">
-          Post ID: <?php echo $row['ID']; ?>
-        </div>
+  <div class="ID">
+    Post ID: <?php echo $row['ID']; ?>
+  </div>
 
-        <div class="date">
-            Posted on: <?php echo $row['date']; ?>
-        </div>
+  <div class="date">
+    Posted on: <?php echo $row['date']; ?>
+  </div>
 
-        <h3>New comment by: <?php echo $row['email']; ?></h3>
+  <h3>Review by: <?php echo $row['email']; ?></h3>
 
-        <div class="mood">
-          Current mood: <?php echo $row['mood']; ?>
-        </div>
+  <div class="mood">
+    Satisfaction: <?php echo $row['mood']; ?>
+  </div>
 
-        <div class="comment-text">
-          <?php echo formatCommentText($row['commentText']); ?>
-        </div>
+  <div class="comment-text">
+    <?php echo formatCommentText($row['commentText']); ?>
+  </div>
 
-      </div>
+</div>
 
-    <?php
+<?php
   }
 
   echo "</div>";

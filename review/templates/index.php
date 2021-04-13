@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
   <title>MeKaWei Dessert Menu</title>
-  <link href="../style.css" rel="stylesheet" type="text/css" />
+  <link href="../review.css" rel="stylesheet" type="text/css" />
   <link href="../mobile.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link
@@ -38,10 +38,10 @@
   <main>
     <section>
 
-      <h1> Customer Review </h1>
+      <h1> Customer Reviews </h1>
 
       <div class="write-comment">
-        <h2>Post a Comment</h2>
+        <h2>Post a Review</h2>
 
 
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
@@ -53,19 +53,20 @@
           </label>
           <br>
           <label>
-            Mood:
-            <select name="mood">
-              <option value="happy">Happy</option>
-              <option value="sad">Sad</option>
-              <option value="excited">Excited</option>
-              <option value="bored">Bored</option>
-              <option value="angry">Angry</option>
+            Satisfaction:
+            <select id="mood" name="mood">
+              <option value="very satisfied">Very satisfied</option>
+              <option value="satisfied">Satisfied</option>
+              <option value="somewhat satisfied">Somewhat satisfied</option>
+              <option value="somewhat dissatisfied">Somewhat dissatisfied </option>
+              <option value="dissatisfied">Dissatisfied</option>
             </select>
           </label>
           <br>
           <label>
             Enter a Comment: <br>
-            <textarea name="comment" required minlength="8" rows="4"></textarea>
+            <textarea name="comment" required minlength="8" rows="4"
+              placeholder="How was your experience with us?"></textarea>
           </label>
 
           <button type="submit" name="button">Post Comment</button>
@@ -73,8 +74,8 @@
         </form>
       </div>
       <?php
-      the_comments();
-      ?>
+        the_comments();
+        ?>
 </body>
 
 

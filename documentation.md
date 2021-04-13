@@ -17,11 +17,12 @@ The layout for all pages mainly used CSS Grid.
 ## Animation ##
 
 **1.** Transitions  
-   * All links have a hover state that uses transition to slowly change the colour of the link.
-   * The arrows for the slideshow also use transition to 
+   * All pages: All links have a hover state that uses transition to slowly change the colour of the link.
+   * Homepage: The slideshow has transition on the arrows and slide indicators to make the hover over state look less jarring
+   * Both Menus: Menu pages use transition with transform to show details of the menu pictures when clicked.
 **2.** Keyframe Animations
-   * Mixed
-   * Mixed  
+   * Homepage: The landing page portion of the homepage feature slide in animation.
+   * Homepage: The slideshow slides fade in and slide to the right at the same time
 
 
 ## Validation ##
@@ -29,6 +30,8 @@ The layout for all pages mainly used CSS Grid.
 **1.** On the review page, users had to insert "@" in the email section and the email is required.
 
 **2.** On the review page, users had to insert more than 8 characters in the comment input. The comment section is required.
+
+**3.** Homepage: Register has front end validation for emails.
 
 ## Prevent Malicious Activity ##
 

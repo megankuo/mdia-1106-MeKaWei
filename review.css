@@ -1,0 +1,52 @@
+form {
+  width: 100%;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: none;
+  font-family: Tahoma, sans-serif;
+}
+
+.comments {
+  padding: 1em;
+}
+
+.comment {
+  display: grid;
+  grid-template-areas: 'id date' 'email email' 'mood mood' 'review review';
+  /* grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr; */
+  background-color: rgba(202, 224, 236, 0.5);
+  margin-bottom: 1em;
+  padding: 1em;
+}
+
+.ID {
+  grid-area: id;
+  font-size: 0.5em;
+}
+
+.date {
+  grid-area: date;
+  font-size: 0.5em;
+  justify-self: right;
+}
+
+.comment h3 {
+  grid-area: email;
+  margin: 0;
+}
+
+.mood {
+  grid-area: mood;
+  font-size: 0.75em;
+  justify-self: center;
+}
+
+.comment-text {
+  grid-area: review;
+  /* margin: 0 0 2em; */
+  align-self: start;
+}

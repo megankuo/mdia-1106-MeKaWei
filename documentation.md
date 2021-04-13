@@ -35,9 +35,9 @@ Mobile first design approach with a hamburger menu as default navigation bar. Us
 
 ## Validation
 
-**1.** On the review page, users had to insert "@" in the email section and the email is required.
+**1.** On the review page, users had to insert "@" in the email section and the email is required. This rule is enforced on front and back end.
 
-**2.** On the review page, users had to insert more than 8 characters in the comment input. The comment section is required.
+**2.** On the review page, users had to insert more than 8 characters in the comment input. The comment section is required. This rule is enforced on front and back end.
 
 **3.** Homepage: Register has front end validation for emails.
 

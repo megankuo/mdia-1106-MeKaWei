@@ -30,7 +30,12 @@ https://themovementmenu.com/boba-cold-brew/
 
 
 pearl bun:  
-https://www.shidafa.com.tw/order_detail/26
+
+
+
+code source:
+https://www.w3schools.com/tags/att_input_required.asp
+
 
 
 
